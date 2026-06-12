@@ -17,8 +17,9 @@ const campusLocations = [
 ];
 
 function setCors(req, res) {
-  const origin = req.headers.origin || "*";
-  res.setHeader("Access-Control-Allow-Origin", origin);
+  const allowed = process.env.FRONTEND_URL || "http://localhost:5173";
+  const origin = req.headers.origin || "";
+  res.setHeader("Access-Control-Allow-Origin", allowed.includes(origin) ? origin : allowed);
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, OPTIONS");

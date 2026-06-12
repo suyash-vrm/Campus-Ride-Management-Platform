@@ -223,11 +223,7 @@ function AuthScreen({ onAuthed }) {
         <p className="lead">
           Request, assign, track, complete, and rate campus rides with live state updates for passengers and drivers.
         </p>
-        <div className="heroMetrics">
-          <span><strong>SSE</strong> live updates</span>
-          <span><strong>JWT</strong> auth</span>
-          <span><strong>JSON</strong> local DB</span>
-        </div>
+       
       </section>
 
       <section className="authPanel">

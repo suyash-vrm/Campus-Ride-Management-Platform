@@ -1,177 +1,479 @@
 {
-  "businesses": [
+  "users": [
     {
-      "id": "d1",
-      "name": "Sharma FMCG Supply",
-      "role": "Distributor",
-      "city": "Aligarh",
-      "owner": "Ramesh Sharma",
-      "phone": "9876543210",
-      "email": "ramesh@trustlink.demo",
-      "passwordHash": "pbkdf2$120000$4c85dbd083d4af4ce9d614a9c72f5635$4b4f20164f2e00c4976ce35ef26069a94c9069130a880d302158a80ee579f13d",
-      "category": "FMCG",
-      "address": "Marris Road, Aligarh, Uttar Pradesh",
-      "pincode": "202001",
-      "lat": 27.8974,
-      "lng": 78.088,
-      "serviceAreaKm": 28,
-      "verification": "GST verified",
-      "creditLimit": 75000
+      "id": "passenger_demo",
+      "role": "passenger",
+      "name": "Aarav Mehta",
+      "email": "aarav@campus.demo",
+      "phone": "9876500001",
+      "passwordHash": "pbkdf2$120000$7c3c5d643f3bd18c53646b181dd3f786$28ea1865b406a35ad8409ebf50dc031a60194744006f3e2d8d93edc5cc1c7ac0",
+      "favoriteLocation": "Lecture Hall Complex",
+      "createdAt": "2026-06-12T09:47:25.364Z"
     },
     {
-      "id": "d2",
-      "name": "Aman Wholesale Traders",
-      "role": "Distributor",
-      "city": "Agra",
-      "owner": "Aman Verma",
-      "phone": "9876500013",
-      "email": "aman@trustlink.demo",
-      "passwordHash": "pbkdf2$120000$4c85dbd083d4af4ce9d614a9c72f5635$4b4f20164f2e00c4976ce35ef26069a94c9069130a880d302158a80ee579f13d",
-      "category": "Personal care",
-      "address": "Sanjay Place, Agra, Uttar Pradesh",
-      "pincode": "282002",
-      "lat": 27.2046,
-      "lng": 77.9986,
-      "serviceAreaKm": 35,
-      "verification": "Trade license verified",
-      "creditLimit": 55000
+      "id": "driver_demo",
+      "role": "driver",
+      "name": "Neha Rawat",
+      "email": "neha.driver@campus.demo",
+      "phone": "9876500002",
+      "passwordHash": "pbkdf2$120000$6b17129f16f0f7db62959177de25d5e4$dc006236ab5a9bee08a87afedbbb7b97597d765ac6cb847a97fb59f27c74e989",
+      "vehicle": {
+        "type": "E-Rickshaw",
+        "plate": "UK 08 ER 2142",
+        "seats": 4
+      },
+      "verification": {
+        "idType": "Campus Mobility Permit",
+        "idNumber": "CMP-2026-118",
+        "verified": true
+      },
+      "availability": "offline",
+      "currentLocation": "Main Gate",
+      "createdAt": "2026-06-12T09:47:25.364Z"
     },
     {
-      "id": "d3",
-      "name": "Bharat Cold Chain",
-      "role": "Distributor",
-      "city": "Aligarh",
-      "owner": "Nitin Bansal",
-      "phone": "9876500014",
-      "email": "nitin@trustlink.demo",
-      "passwordHash": "pbkdf2$120000$4c85dbd083d4af4ce9d614a9c72f5635$4b4f20164f2e00c4976ce35ef26069a94c9069130a880d302158a80ee579f13d",
-      "category": "Beverages",
-      "address": "Sasni Gate, Aligarh, Uttar Pradesh",
-      "pincode": "202001",
-      "lat": 27.8756,
-      "lng": 78.0716,
-      "serviceAreaKm": 18,
-      "verification": "Documents pending",
-      "creditLimit": 42000
-    },
-    {
-      "id": "r1",
-      "name": "Gupta Kirana Store",
-      "role": "Retailer",
-      "city": "Aligarh",
-      "owner": "Suresh Gupta",
-      "phone": "9876500011",
-      "email": "suresh@trustlink.demo",
-      "passwordHash": "pbkdf2$120000$4c85dbd083d4af4ce9d614a9c72f5635$4b4f20164f2e00c4976ce35ef26069a94c9069130a880d302158a80ee579f13d",
-      "category": "Kirana",
-      "address": "Ramghat Road, Aligarh, Uttar Pradesh",
-      "pincode": "202001",
-      "lat": 27.9052,
-      "lng": 78.0818,
-      "serviceAreaKm": 4,
-      "verification": "Shop verified",
-      "creditLimit": 45000
-    },
-    {
-      "id": "r2",
-      "name": "Anaya Daily Needs",
-      "role": "Retailer",
-      "city": "Hathras",
-      "owner": "Anaya Jain",
-      "phone": "9876500012",
-      "email": "anaya@trustlink.demo",
-      "passwordHash": "pbkdf2$120000$4c85dbd083d4af4ce9d614a9c72f5635$4b4f20164f2e00c4976ce35ef26069a94c9069130a880d302158a80ee579f13d",
-      "category": "Kirana",
-      "address": "Talab Chauraha, Hathras, Uttar Pradesh",
-      "pincode": "204101",
-      "lat": 27.5981,
-      "lng": 78.0492,
-      "serviceAreaKm": 5,
-      "verification": "Shop verified",
-      "creditLimit": 30000
+      "id": "driver_second",
+      "role": "driver",
+      "name": "Kabir Singh",
+      "email": "kabir.driver@campus.demo",
+      "phone": "9876500003",
+      "passwordHash": "pbkdf2$120000$d68e6b3dca6dc8f4c97d3bed06fdf70a$1552b2c06f68766549d0c7a8b8a0f3b9a4c5c3475bb014cd4969e6e474f9fb98",
+      "vehicle": {
+        "type": "E-Rickshaw",
+        "plate": "UK 08 ER 4420",
+        "seats": 4
+      },
+      "verification": {
+        "idType": "Campus Mobility Permit",
+        "idNumber": "CMP-2026-119",
+        "verified": true
+      },
+      "availability": "online",
+      "currentLocation": "Sports Complex",
+      "createdAt": "2026-06-12T09:47:25.364Z"
     }
   ],
-  "transactions": [
+  "rides": [
     {
-      "id": "t1",
-      "fromId": "d1",
-      "toId": "r1",
-      "product": "Biscuits and namkeen cartons",
-      "amount": 42000,
-      "invoiceDate": "2026-05-06",
-      "dueDate": "2026-05-21",
-      "paidDate": "2026-05-19",
-      "status": "Paid",
-      "confirmedBy": [
-        "d1",
-        "r1"
+      "id": "ride_mqari0i5_70045b",
+      "passengerId": "passenger_demo",
+      "driverId": "driver_demo",
+      "pickup": "Lecture Hall Complex",
+      "destination": "Main Gate",
+      "passengers": 1,
+      "note": "",
+      "scheduledFor": null,
+      "paymentMethod": "Cash",
+      "fare": 40,
+      "status": "completed",
+      "rejectedDriverIds": [],
+      "timeline": [
+        {
+          "status": "requested",
+          "at": "2026-06-12T10:06:42.701Z",
+          "by": "passenger_demo"
+        },
+        {
+          "status": "accepted",
+          "at": "2026-06-12T10:06:57.374Z",
+          "by": "driver_demo"
+        },
+        {
+          "status": "in_progress",
+          "at": "2026-06-12T10:07:11.091Z",
+          "by": "driver_demo"
+        },
+        {
+          "status": "completed",
+          "at": "2026-06-12T10:07:12.990Z",
+          "by": "driver_demo"
+        }
       ],
-      "notes": "Regular weekly stock"
-    },
-    {
-      "id": "t2",
-      "fromId": "d1",
-      "toId": "r2",
-      "product": "Soap and detergent stock",
-      "amount": 28000,
-      "invoiceDate": "2026-05-12",
-      "dueDate": "2026-05-27",
-      "paidDate": "2026-06-03",
-      "status": "Paid",
-      "confirmedBy": [
-        "d1",
-        "r2"
-      ],
-      "notes": "Paid after follow-up"
-    },
-    {
-      "id": "t3",
-      "fromId": "d2",
-      "toId": "r1",
-      "product": "Hair oil display packs",
-      "amount": 18500,
-      "invoiceDate": "2026-05-30",
-      "dueDate": "2026-06-14",
-      "paidDate": "",
-      "status": "Unpaid",
-      "confirmedBy": [
-        "d2"
-      ],
-      "notes": "Retailer confirmation pending"
-    },
-    {
-      "id": "t4",
-      "fromId": "d1",
-      "toId": "r1",
-      "product": "Cold drinks crate refill",
-      "amount": 33000,
-      "invoiceDate": "2026-06-02",
-      "dueDate": "2026-06-17",
-      "paidDate": "",
-      "status": "Unpaid",
-      "confirmedBy": [
-        "d1",
-        "r1"
-      ],
-      "notes": "Active credit cycle"
+      "createdAt": "2026-06-12T10:06:42.701Z",
+      "updatedAt": "2026-06-12T10:07:12.990Z"
     }
   ],
-  "partnerRequests": [
+  "feedback": [
     {
-      "id": "req1781116886329",
-      "fromId": "d1",
-      "toId": "r1",
-      "status": "Accepted",
-      "message": "Sharma FMCG Supply wants to start verified trade with Gupta Kirana Store.",
-      "createdAt": "2026-06-10"
+      "id": "fb_mqaris58_wwemtm",
+      "rideId": "ride_mqari0i5_70045b",
+      "passengerId": "passenger_demo",
+      "driverId": "driver_demo",
+      "rating": 5,
+      "comment": "",
+      "createdAt": "2026-06-12T10:07:18.524Z"
+    }
+  ],
+  "audit": [
+    {
+      "id": "evt_mqari0i6_rlflju",
+      "type": "ride:requested",
+      "payload": {
+        "ride": {
+          "id": "ride_mqari0i5_70045b",
+          "passengerId": "passenger_demo",
+          "driverId": null,
+          "pickup": "Lecture Hall Complex",
+          "destination": "Main Gate",
+          "passengers": 1,
+          "note": "",
+          "scheduledFor": null,
+          "paymentMethod": "Cash",
+          "fare": 40,
+          "status": "requested",
+          "rejectedDriverIds": [],
+          "timeline": [
+            {
+              "status": "requested",
+              "at": "2026-06-12T10:06:42.701Z",
+              "by": "passenger_demo"
+            }
+          ],
+          "createdAt": "2026-06-12T10:06:42.701Z",
+          "updatedAt": "2026-06-12T10:06:42.701Z",
+          "passenger": {
+            "id": "passenger_demo",
+            "role": "passenger",
+            "name": "Aarav Mehta",
+            "email": "aarav@campus.demo",
+            "phone": "9876500001",
+            "favoriteLocation": "Lecture Hall Complex",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "driver": null,
+          "feedback": null
+        }
+      },
+      "createdAt": "2026-06-12T10:06:42.702Z"
     },
     {
-      "id": "req1",
-      "fromId": "r1",
-      "toId": "d3",
-      "status": "Pending",
-      "message": "Looking for regular beverage supply near Ramghat Road.",
-      "createdAt": "2026-06-07"
+      "id": "evt_mqaribtq_n1rcr1",
+      "type": "ride:accepted",
+      "payload": {
+        "ride": {
+          "id": "ride_mqari0i5_70045b",
+          "passengerId": "passenger_demo",
+          "driverId": "driver_demo",
+          "pickup": "Lecture Hall Complex",
+          "destination": "Main Gate",
+          "passengers": 1,
+          "note": "",
+          "scheduledFor": null,
+          "paymentMethod": "Cash",
+          "fare": 40,
+          "status": "accepted",
+          "rejectedDriverIds": [],
+          "timeline": [
+            {
+              "status": "requested",
+              "at": "2026-06-12T10:06:42.701Z",
+              "by": "passenger_demo"
+            },
+            {
+              "status": "accepted",
+              "at": "2026-06-12T10:06:57.374Z",
+              "by": "driver_demo"
+            }
+          ],
+          "createdAt": "2026-06-12T10:06:42.701Z",
+          "updatedAt": "2026-06-12T10:06:57.374Z",
+          "passenger": {
+            "id": "passenger_demo",
+            "role": "passenger",
+            "name": "Aarav Mehta",
+            "email": "aarav@campus.demo",
+            "phone": "9876500001",
+            "favoriteLocation": "Lecture Hall Complex",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "driver": {
+            "id": "driver_demo",
+            "role": "driver",
+            "name": "Neha Rawat",
+            "email": "neha.driver@campus.demo",
+            "phone": "9876500002",
+            "vehicle": {
+              "type": "E-Rickshaw",
+              "plate": "UK 08 ER 2142",
+              "seats": 4
+            },
+            "verification": {
+              "idType": "Campus Mobility Permit",
+              "idNumber": "CMP-2026-118",
+              "verified": true
+            },
+            "availability": "busy",
+            "currentLocation": "Main Gate",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "feedback": null
+        }
+      },
+      "createdAt": "2026-06-12T10:06:57.374Z"
+    },
+    {
+      "id": "evt_mqarimer_048t32",
+      "type": "ride:started",
+      "payload": {
+        "ride": {
+          "id": "ride_mqari0i5_70045b",
+          "passengerId": "passenger_demo",
+          "driverId": "driver_demo",
+          "pickup": "Lecture Hall Complex",
+          "destination": "Main Gate",
+          "passengers": 1,
+          "note": "",
+          "scheduledFor": null,
+          "paymentMethod": "Cash",
+          "fare": 40,
+          "status": "in_progress",
+          "rejectedDriverIds": [],
+          "timeline": [
+            {
+              "status": "requested",
+              "at": "2026-06-12T10:06:42.701Z",
+              "by": "passenger_demo"
+            },
+            {
+              "status": "accepted",
+              "at": "2026-06-12T10:06:57.374Z",
+              "by": "driver_demo"
+            },
+            {
+              "status": "in_progress",
+              "at": "2026-06-12T10:07:11.091Z",
+              "by": "driver_demo"
+            }
+          ],
+          "createdAt": "2026-06-12T10:06:42.701Z",
+          "updatedAt": "2026-06-12T10:07:11.091Z",
+          "passenger": {
+            "id": "passenger_demo",
+            "role": "passenger",
+            "name": "Aarav Mehta",
+            "email": "aarav@campus.demo",
+            "phone": "9876500001",
+            "favoriteLocation": "Lecture Hall Complex",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "driver": {
+            "id": "driver_demo",
+            "role": "driver",
+            "name": "Neha Rawat",
+            "email": "neha.driver@campus.demo",
+            "phone": "9876500002",
+            "vehicle": {
+              "type": "E-Rickshaw",
+              "plate": "UK 08 ER 2142",
+              "seats": 4
+            },
+            "verification": {
+              "idType": "Campus Mobility Permit",
+              "idNumber": "CMP-2026-118",
+              "verified": true
+            },
+            "availability": "busy",
+            "currentLocation": "Main Gate",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "feedback": null
+        }
+      },
+      "createdAt": "2026-06-12T10:07:11.091Z"
+    },
+    {
+      "id": "evt_mqarinvi_de00r1",
+      "type": "ride:completed",
+      "payload": {
+        "ride": {
+          "id": "ride_mqari0i5_70045b",
+          "passengerId": "passenger_demo",
+          "driverId": "driver_demo",
+          "pickup": "Lecture Hall Complex",
+          "destination": "Main Gate",
+          "passengers": 1,
+          "note": "",
+          "scheduledFor": null,
+          "paymentMethod": "Cash",
+          "fare": 40,
+          "status": "completed",
+          "rejectedDriverIds": [],
+          "timeline": [
+            {
+              "status": "requested",
+              "at": "2026-06-12T10:06:42.701Z",
+              "by": "passenger_demo"
+            },
+            {
+              "status": "accepted",
+              "at": "2026-06-12T10:06:57.374Z",
+              "by": "driver_demo"
+            },
+            {
+              "status": "in_progress",
+              "at": "2026-06-12T10:07:11.091Z",
+              "by": "driver_demo"
+            },
+            {
+              "status": "completed",
+              "at": "2026-06-12T10:07:12.990Z",
+              "by": "driver_demo"
+            }
+          ],
+          "createdAt": "2026-06-12T10:06:42.701Z",
+          "updatedAt": "2026-06-12T10:07:12.990Z",
+          "passenger": {
+            "id": "passenger_demo",
+            "role": "passenger",
+            "name": "Aarav Mehta",
+            "email": "aarav@campus.demo",
+            "phone": "9876500001",
+            "favoriteLocation": "Lecture Hall Complex",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "driver": {
+            "id": "driver_demo",
+            "role": "driver",
+            "name": "Neha Rawat",
+            "email": "neha.driver@campus.demo",
+            "phone": "9876500002",
+            "vehicle": {
+              "type": "E-Rickshaw",
+              "plate": "UK 08 ER 2142",
+              "seats": 4
+            },
+            "verification": {
+              "idType": "Campus Mobility Permit",
+              "idNumber": "CMP-2026-118",
+              "verified": true
+            },
+            "availability": "online",
+            "currentLocation": "Main Gate",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "feedback": null
+        }
+      },
+      "createdAt": "2026-06-12T10:07:12.990Z"
+    },
+    {
+      "id": "evt_mqaris58_ec4f72",
+      "type": "ride:rated",
+      "payload": {
+        "ride": {
+          "id": "ride_mqari0i5_70045b",
+          "passengerId": "passenger_demo",
+          "driverId": "driver_demo",
+          "pickup": "Lecture Hall Complex",
+          "destination": "Main Gate",
+          "passengers": 1,
+          "note": "",
+          "scheduledFor": null,
+          "paymentMethod": "Cash",
+          "fare": 40,
+          "status": "completed",
+          "rejectedDriverIds": [],
+          "timeline": [
+            {
+              "status": "requested",
+              "at": "2026-06-12T10:06:42.701Z",
+              "by": "passenger_demo"
+            },
+            {
+              "status": "accepted",
+              "at": "2026-06-12T10:06:57.374Z",
+              "by": "driver_demo"
+            },
+            {
+              "status": "in_progress",
+              "at": "2026-06-12T10:07:11.091Z",
+              "by": "driver_demo"
+            },
+            {
+              "status": "completed",
+              "at": "2026-06-12T10:07:12.990Z",
+              "by": "driver_demo"
+            }
+          ],
+          "createdAt": "2026-06-12T10:06:42.701Z",
+          "updatedAt": "2026-06-12T10:07:12.990Z",
+          "passenger": {
+            "id": "passenger_demo",
+            "role": "passenger",
+            "name": "Aarav Mehta",
+            "email": "aarav@campus.demo",
+            "phone": "9876500001",
+            "favoriteLocation": "Lecture Hall Complex",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "driver": {
+            "id": "driver_demo",
+            "role": "driver",
+            "name": "Neha Rawat",
+            "email": "neha.driver@campus.demo",
+            "phone": "9876500002",
+            "vehicle": {
+              "type": "E-Rickshaw",
+              "plate": "UK 08 ER 2142",
+              "seats": 4
+            },
+            "verification": {
+              "idType": "Campus Mobility Permit",
+              "idNumber": "CMP-2026-118",
+              "verified": true
+            },
+            "availability": "online",
+            "currentLocation": "Main Gate",
+            "createdAt": "2026-06-12T09:47:25.364Z"
+          },
+          "feedback": {
+            "id": "fb_mqaris58_wwemtm",
+            "rideId": "ride_mqari0i5_70045b",
+            "passengerId": "passenger_demo",
+            "driverId": "driver_demo",
+            "rating": 5,
+            "comment": "",
+            "createdAt": "2026-06-12T10:07:18.524Z"
+          }
+        },
+        "feedback": {
+          "id": "fb_mqaris58_wwemtm",
+          "rideId": "ride_mqari0i5_70045b",
+          "passengerId": "passenger_demo",
+          "driverId": "driver_demo",
+          "rating": 5,
+          "comment": "",
+          "createdAt": "2026-06-12T10:07:18.524Z"
+        }
+      },
+      "createdAt": "2026-06-12T10:07:18.524Z"
+    },
+    {
+      "id": "evt_mqarjutf_wxvi3u",
+      "type": "driver:availability",
+      "payload": {
+        "driver": {
+          "id": "driver_demo",
+          "role": "driver",
+          "name": "Neha Rawat",
+          "email": "neha.driver@campus.demo",
+          "phone": "9876500002",
+          "vehicle": {
+            "type": "E-Rickshaw",
+            "plate": "UK 08 ER 2142",
+            "seats": 4
+          },
+          "verification": {
+            "idType": "Campus Mobility Permit",
+            "idNumber": "CMP-2026-118",
+            "verified": true
+          },
+          "availability": "offline",
+          "currentLocation": "Main Gate",
+          "createdAt": "2026-06-12T09:47:25.364Z"
+        }
+      },
+      "createdAt": "2026-06-12T10:08:08.643Z"
     }
   ]
 }

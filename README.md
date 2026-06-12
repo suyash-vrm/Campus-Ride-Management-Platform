@@ -1,27 +1,38 @@
-# TrustLink
+# CampusRide
 
-TrustLink is now a fullstack distributor-retailer trust ledger.
+CampusRide is a full-stack campus ride management platform built for the "Real-Time Campus Mobility and Ride Management Platform" problem statement from Cult Open Projects 2026.
 
-## Project Structure
+## Technology Stack
 
-- `frontend/` - React + Vite user interface
-- `backend/` - Node.js API server
-- `backend/data/db.json` - local JSON database for users, transactions, and partner requests
+- Frontend: React 19 + Vite
+- Backend: Node.js HTTP server with ES modules
+- Real-time updates: Server-Sent Events
+- Map: Leaflet with OpenStreetMap tiles and live ride overlays
+- Auth: signed JWT-style bearer tokens with PBKDF2 password hashing
+- Database: local JSON file at `backend/data/db.json`
 
 ## Features
 
-- Authentication with login and signup
-- Role-based accounts for distributors and retailers
-- Retailers discover distributors; distributors discover retailers
-- Transaction ledger with confirmation and payment marking
-- Partner connection requests
-- Rule-based trust score and suggested credit limit
-- Location fields with Google Maps search and route links
+- Passenger and driver registration/login
+- Driver onboarding with vehicle and permit details
+- Driver online/offline availability management
+- Available-driver discovery for passengers
+- Ride requests with pickup, destination, passenger count, notes, scheduling, and payment mode
+- Single-driver ride assignment with conflict protection
+- Ride lifecycle: requested, accepted, in progress, completed, cancelled
+- Real-time notifications for ride and driver state changes
+- Live campus map for passengers and drivers with driver markers, pickup/drop points, and active route lines
+- Driver dashboard with completed rides, active rides, earnings, ratings, ride history, and demand insights
+- Passenger ratings and written feedback for completed rides
+- Basic demand analytics for active demand and popular pickup locations
 
-## Demo Login
+## Demo Accounts
 
-- Distributor: `ramesh@trustlink.demo` / `demo123`
-- Retailer: `suresh@trustlink.demo` / `demo123`
+- Passenger: `aarav@campus.demo` / `demo123`
+- Driver: `neha.driver@campus.demo` / `demo123`
+- Driver: `kabir.driver@campus.demo` / `demo123`
+
+Seed accounts are created automatically when the backend starts with an empty database.
 
 ## Run Locally
 
@@ -45,22 +56,28 @@ Then open:
 http://127.0.0.1:5173/
 ```
 
-Do not use `http://127.0.0.1:4173/` for development anymore. That was the old static demo server.
+## API Overview
 
-## Data Storage
+- `POST /api/auth/signup` - create passenger or driver account
+- `POST /api/auth/login` - login and receive bearer token
+- `GET /api/me` - current user profile
+- `GET /api/locations` - campus pickup/drop locations
+- `GET /api/drivers/available` - online drivers
+- `PATCH /api/drivers/status` - driver availability and current stand
+- `GET /api/rides` - rides visible to the current user
+- `POST /api/rides` - passenger creates ride request
+- `PATCH /api/rides/:id/accept` - driver accepts a requested ride
+- `PATCH /api/rides/:id/reject` - driver rejects a requested ride
+- `PATCH /api/rides/:id/start` - assigned driver starts ride
+- `PATCH /api/rides/:id/complete` - assigned driver completes ride
+- `PATCH /api/rides/:id/cancel` - passenger or assigned driver cancels ride
+- `POST /api/rides/:id/rating` - passenger rates a completed ride
+- `GET /api/analytics/driver` - driver performance dashboard
+- `GET /api/analytics/demand` - platform demand summary
+- `GET /api/events?token=...` - SSE stream for live updates
 
-User accounts and login-related business data are stored in:
+## Design Notes
 
-```text
-backend/data/db.json
-```
+The backend uses a single JSON database for reproducibility during judging. Ride assignment is guarded on the server: only rides in `requested` state without a `driverId` can be accepted, so a ride cannot be assigned to multiple drivers. All lifecycle changes write to a ride timeline and broadcast an SSE event so open passenger and driver dashboards stay synchronized.
 
-Passwords are stored as PBKDF2 hashes, not plain text.
-
-## Scoring Model
-
-- 42% payment timeliness
-- 28% mutual transaction confirmation
-- 18% clean dispute record
-- 12% transaction depth
-- Overdue unpaid entries apply a penalty
+See `DESIGN.md` for the architecture, schema, ERD, and design-decision summary.

@@ -1,5 +1,7 @@
-const API_BASE_URL = "https://trustlink-backend-production.up.railway.app/api";
-const TOKEN_KEY = "trustlink_token";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000/api";
+const TOKEN_KEY = "campusride_token";
+
+export { API_BASE_URL };
 
 export function getToken() {
   return localStorage.getItem(TOKEN_KEY);

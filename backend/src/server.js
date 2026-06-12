@@ -436,6 +436,7 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(config.port, "0.0.0.0", () => {
-  console.log(`CampusRide API running on http://0.0.0.0:${config.port}`);
+const PORT = process.env.PORT || config.port || 3001;
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`CampusRide API running on http://0.0.0.0:${PORT}`);
 });

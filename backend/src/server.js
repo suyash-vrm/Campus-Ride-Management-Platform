@@ -17,9 +17,14 @@ const campusLocations = [
 ];
 
 function setCors(req, res) {
-  const allowed = process.env.FRONTEND_URL || "http://localhost:5173";
   const origin = req.headers.origin || "";
-  res.setHeader("Access-Control-Allow-Origin", allowed.includes(origin) ? origin : allowed);
+  const allowed =
+    !origin ||
+    origin === (process.env.FRONTEND_URL || "http://localhost:5173") ||
+    origin.endsWith(".vercel.app") ||
+    origin.startsWith("http://localhost");
+
+  res.setHeader("Access-Control-Allow-Origin", allowed ? origin || "*" : "");
   res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, OPTIONS");
@@ -250,7 +255,7 @@ function streamEvents(req, res, token) {
     "Content-Type": "text/event-stream",
     "Cache-Control": "no-cache, no-transform",
     Connection: "keep-alive",
-    "Access-Control-Allow-Origin": req.headers.origin || "*"
+    "Access-Control-Allow-Origin": req.headers.origin || process.env.FRONTEND_URL || "*"
   });
   res.write(`event: connected\ndata: ${JSON.stringify({ ok: true, at: now() })}\n\n`);
   clients.add(res);

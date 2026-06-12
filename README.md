@@ -2,6 +2,8 @@
 
 CampusRide is a full-stack, real-time campus mobility platform that coordinates e-rickshaw rides within a university campus. It was built for the **"Real-Time Campus Mobility and Ride Management Platform"** problem statement from **Cult Open Projects 2026**.
 
+Demo Video : https://drive.google.com/drive/folders/1Kp7PxK6WihAuUJg6gTJRL1JlDNO1nQDE?usp=sharing
+
 ---
 
 ## The Problem
